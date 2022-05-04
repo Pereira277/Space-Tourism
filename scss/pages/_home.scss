@@ -1,0 +1,85 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins" as mix;
+
+.home-body {
+  background: url("/assets/home/background-home-mobile.jpg") no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  @include mix.tablet {
+    background: url("/assets/home/background-home-tablet.jpg") no-repeat center
+      center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  @include mix.desktop {
+    background: url("/assets/home/background-home-desktop.jpg") no-repeat center
+      center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+.home-content {
+  margin: 24px 24px 24px 24px;
+
+  @include mix.tablet {
+    margin: 106px 150px 0 150px;
+  }
+  @include mix.desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 58px 196px 128px;
+    text-align: start;
+    margin: 251px 165px 130px 165px;
+  }
+}
+.home-subtitle {
+  @include mix.desktop {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+}
+.home-title {
+  margin: 16px 0 16px 0;
+  @include mix.tablet {
+    margin: 24px 0 24px 0;
+  }
+  @include mix.desktop {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    align-self: center;
+  }
+}
+.home-paragraph {
+  @include mix.desktop {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    width: 450px;
+  }
+}
+.btn-explore {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 81px;
+  @include mix.tablet {
+    width: 242px;
+    height: 242px;
+    margin-top: 156px;
+  }
+  @include mix.desktop {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 0px 0px 0px 0px;
+    justify-self: end;
+    margin-top: 80px;
+  }
+}

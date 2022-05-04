@@ -1,0 +1,51 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins" as mix;
+
+.nav {
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  height: 80px;
+  width: 100vw;
+
+  .nav-logo {
+    height: 40px;
+    width: 40px;
+    margin: 20px 0 0 20px;
+  }
+  .nav-menu {
+    grid-column-start: 3;
+  }
+}
+.nav-line {
+  display: none;
+}
+@include mix.tablet {
+  .nav {
+    height: 96px;
+    grid-template-columns: 87px 1fr 450px;
+    .nav-logo {
+      height: 48px;
+      width: 48px;
+      margin: 24px 0 0 39px;
+    }
+  }
+}
+@include mix.desktop {
+  .nav {
+    margin-top: 40px;
+    .nav-logo {
+      margin: 24px 0 0 55px;
+    }
+  }
+  .nav-line {
+    display: inline-block;
+    position: absolute;
+    height: 1px;
+    width: calc(32vw - 50px);
+    /*inset: 88px 11vw 0 0;*/
+    right: 63vw;
+    top: 105px;
+    background: #ffffff;
+    opacity: 0.25;
+  }
+}

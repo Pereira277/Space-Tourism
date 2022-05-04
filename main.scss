@@ -1,0 +1,11 @@
+@use "scss/base/reset";
+@use "scss/base/typography";
+@use "scss/utils/variables" as var;
+@use "scss/utils/mixins" as mix;
+@use "scss/components/navmenu";
+@use "scss/components/navbar";
+@use "scss/pages/home";
+
+body {
+  background-color: var.$darkblue;
+}

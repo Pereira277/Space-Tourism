@@ -1,0 +1,13 @@
+@use "../utils/variables" as var;
+
+/*Screen size media queries*/
+@mixin tablet {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
