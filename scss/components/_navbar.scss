@@ -42,10 +42,38 @@
     position: absolute;
     height: 1px;
     width: calc(32vw - 50px);
-    /*inset: 88px 11vw 0 0;*/
     right: 63vw;
-    top: 105px;
+    top: 88px;
     background: #ffffff;
     opacity: 0.25;
+  }
+}
+
+/* TYPOGRAPHY */
+.nav {
+  .nav-menu {
+    font-family: var.$font2;
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 2.7px;
+    color: #ffffff;
+  }
+  @include mix.tablet {
+    .nav-menu {
+      font-family: var.$font2;
+      font-size: 14px;
+      line-height: 16.8px;
+      letter-spacing: 2.36px;
+      color: #ffffff;
+    }
+  }
+  @include mix.desktop {
+    .nav-menu {
+      font-family: var.$font2;
+      font-size: 16px;
+      line-height: 19.2px;
+      letter-spacing: 2.7px;
+      color: #ffffff;
+    }
   }
 }

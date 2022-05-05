@@ -5,7 +5,4 @@
 @use "scss/components/navmenu";
 @use "scss/components/navbar";
 @use "scss/pages/home";
-
-body {
-  background-color: var.$darkblue;
-}
+@use "scss/pages/destination";

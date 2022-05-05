@@ -1,0 +1,238 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins" as mix;
+
+.destination-body {
+  background: url("/assets/destination/background-destination-mobile.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  @include mix.tablet {
+    background: url("/assets/destination/background-destination-tablet.jpg")
+      no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  @include mix.desktop {
+    background: url("/assets/destination/background-destination-desktop.jpg")
+      no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+
+.dest-content {
+  margin: 0px auto 50px auto;
+  padding: 0 24px 0 24px;
+
+  @include mix.tablet {
+    padding: 0 39px 0 39px;
+  }
+  @include mix.desktop {
+    margin: 76px auto;
+    display: grid;
+    width: 1111px;
+    grid-template-columns: 666px 445px;
+    grid-template-rows: 98px 71px 129px 182px 29px 90px;
+    text-align: start;
+  }
+
+  .dest-sub {
+    margin: 0 auto;
+    display: flex;
+    width: 221px;
+    .dest-sub-num {
+      margin-right: 18px;
+    }
+    @include mix.tablet {
+      margin: 40px 0 0 0;
+      width: 272px;
+    }
+    @include mix.desktop {
+      margin: 0px 0 64px 0;
+      width: 382px;
+    }
+  }
+  .dest-img {
+    width: 170px;
+    height: 170px;
+    margin: 32px 0 26px 0;
+    @include mix.tablet {
+      width: 300px;
+      height: 300px;
+      margin: 60px 0 53px 0;
+    }
+    @include mix.desktop {
+      grid-column-start: 1;
+      grid-row: 2 / span 5;
+      width: 445px;
+      height: 445px;
+      margin: 33px 0 0px 50px;
+    }
+  }
+  .dest-btn-container {
+    display: flex;
+    justify-content: space-around;
+    width: 237px;
+    margin: 0 auto;
+    @include mix.tablet {
+      width: 285.5px;
+    }
+    @include mix.desktop {
+      grid-column-start: 2;
+      grid-row-start: 2;
+      margin: 0 0 37px 0;
+    }
+    li {
+      button {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        outline: none;
+        padding: 0;
+        height: 30px;
+      }
+      .dest-btn-inactive:hover {
+        border-bottom: rgba(255, 255, 255, 0.5) solid 3px;
+      }
+
+      .dest-btn-active {
+        border-bottom: #ffffff solid 3px;
+        color: #ffffff;
+      }
+      .dest-btn-moon {
+        width: 35px;
+        @include mix.tablet {
+          width: 39px;
+        }
+      }
+      .dest-btn-mars {
+        width: 33px;
+        @include mix.tablet {
+          width: 37px;
+        }
+      }
+      .dest-btn-europa {
+        width: 49px;
+        @include mix.tablet {
+          width: 56px;
+        }
+      }
+      .dest-btn-titan {
+        width: 37px;
+        @include mix.tablet {
+          width: 42px;
+        }
+      }
+    }
+  }
+  .dest-name {
+    margin-top: 20px;
+    @include mix.tablet {
+      margin-top: 32px;
+    }
+    @include mix.desktop {
+      grid-column-start: 2;
+      grid-row-start: 3;
+      margin: 0 0 14px 0;
+    }
+  }
+  .dest-description {
+    width: 327px;
+    margin: 8px auto 0 auto;
+    @include mix.tablet {
+      width: 573px;
+    }
+    @include mix.desktop {
+      height: 128px;
+      width: 444px;
+      grid-column-start: 2;
+      grid-row-start: 4;
+      margin: 0 auto 54px 0;
+    }
+  }
+  .dest-divider {
+    margin: 32px 0 32px 0;
+    height: 1px;
+    background: #383b4b;
+    @include mix.tablet {
+      margin: 49px 0 28px 0;
+    }
+    @include mix.desktop {
+      grid-column-start: 2;
+      grid-row-start: 5;
+      margin: 0 0 28px 0;
+    }
+  }
+  .dest-container-2 {
+    @include mix.tablet {
+      width: 573px;
+      height: 90px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.6fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    @include mix.desktop {
+      grid-column-start: 2;
+      grid-row-start: 6;
+      margin: 0;
+    }
+  }
+  .dest-dist {
+    margin-bottom: 12px;
+    @include mix.tablet {
+      width: 216px;
+      height: 17px;
+      margin: 0px 11px 12px 65.5px;
+    }
+    @include mix.desktop {
+      margin-left: 0px;
+    }
+  }
+  .dest-dist-num {
+    margin-bottom: 32px;
+    @include mix.tablet {
+      grid-column-start: 1;
+      grid-row-start: 2;
+      width: 216px;
+      height: 32px;
+      margin-left: 65.5px;
+    }
+    @include mix.desktop {
+      margin-left: 0px;
+    }
+  }
+  .dest-time {
+    margin-bottom: 12px;
+    @include mix.tablet {
+      grid-column-start: 2;
+      grid-row-start: 1;
+      width: 223px;
+      height: 17px;
+      margin: 0px 57.5px 12px 0px;
+    }
+    @include mix.desktop {
+      margin-left: 0px;
+    }
+  }
+  .dest-time-num {
+    @include mix.tablet {
+      grid-column-start: 2;
+      grid-row-start: 2;
+      width: 223px;
+      height: 32px;
+      margin-right: 57.5px;
+    }
+    @include mix.desktop {
+      margin-left: 0px;
+    }
+  }
+}

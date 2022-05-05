@@ -17,7 +17,7 @@
     />
     <link rel="shortcut icon" href="assets/shared/logo.svg" />
   </head>
-  <body class="home-body">
+  <body class="destination-body">
     <!--Navbar-->
     <div class="nav-line"></div>
     <div class="nav">
@@ -46,16 +46,60 @@
       </div>
     </div>
     <!--Body-->
-    <div class="home-content">
-      <p class="home-subtitle">SO, YOU WANT TO TRAVEL TO</p>
-      <p class="home-title">SPACE</p>
-      <p class="home-paragraph">
-        Let’s face it; if you want to go to space, you might as well genuinely
-        go to outer space and not hover kind of on the edge of it. Well sit
-        back, and relax because we’ll give you a truly out of this world
-        experience!
+    <div class="dest-content">
+      <div class="dest-sub">
+        <p class="dest-sub-num">01</p>
+        <p class="dest-sub-txt">PICK YOUR DESTINATION</p>
+      </div>
+      <img class="dest-img" src="/assets/destination/image-moon.png" alt="" />
+      <ul class="dest-btn-container">
+        <li>
+          <button
+            class="dest-btn-moon dest-btn-active"
+            onclick="ChangeDest('moon')"
+          >
+            MOON
+          </button>
+        </li>
+        <li>
+          <button
+            class="dest-btn-mars dest-btn-inactive"
+            onclick="ChangeDest('mars')"
+          >
+            MARS
+          </button>
+        </li>
+        <li>
+          <button
+            class="dest-btn-europa dest-btn-inactive"
+            onclick="ChangeDest('europa')"
+          >
+            EUROPA
+          </button>
+        </li>
+        <li>
+          <button
+            class="dest-btn-titan dest-btn-inactive"
+            onclick="ChangeDest('titan')"
+          >
+            TITAN
+          </button>
+        </li>
+      </ul>
+      <p class="dest-name">MOON</p>
+      <p class="dest-description">
+        See our planet as you’ve never seen it before. A perfect relaxing trip
+        away to help regain perspective and come back refreshed. While you’re
+        there, take in some history by visiting the Luna 2 and Apollo 11 landing
+        sites.
       </p>
-      <button class="btn-explore">EXPLORE</button>
+      <div class="dest-divider"></div>
+      <div class="dest-container-2">
+        <p class="dest-dist">AVG. DISTANCE</p>
+        <p class="dest-dist-num">384,400 KM</p>
+        <p class="dest-time">EST. TRAVEL TIME</p>
+        <p class="dest-time-num">3 DAYS</p>
+      </div>
     </div>
 
     <script src="app.js" async defer></script>

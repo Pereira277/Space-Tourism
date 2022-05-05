@@ -1,38 +1,6 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins" as mix;
 
-body {
-  font-family: var.$font1;
-}
-/*NavBar*/
-.nav {
-  .nav-menu {
-    font-family: var.$font2;
-    font-size: 16px;
-    line-height: 19.2px;
-    letter-spacing: 2.7px;
-    color: #ffffff;
-  }
-  @include mix.tablet {
-    .nav-menu {
-      font-family: var.$font2;
-      font-size: 14px;
-      line-height: 16.8px;
-      letter-spacing: 2.36px;
-      color: #ffffff;
-    }
-  }
-  @include mix.desktop {
-    .nav-menu {
-      font-family: var.$font2;
-      font-size: 16px;
-      line-height: 19.2px;
-      letter-spacing: 2.7px;
-      color: #ffffff;
-    }
-  }
-}
-
 /* HOME */
 .home-subtitle {
   font-family: var.$font2;
@@ -93,4 +61,94 @@ body {
     line-height: 37px;
     letter-spacing: 2px;
   }
+}
+
+/* DESTINATION */
+
+.dest-sub {
+  font-family: var.$font2;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+  @include mix.tablet {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+  @include mix.desktop {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
+  .dest-sub-num {
+    font-weight: 700;
+    opacity: 0.25;
+  }
+}
+.dest-btn-container li button {
+  font-family: var.$font2;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  color: #d0d6f9;
+  @include mix.tablet {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+}
+.dest-name {
+  font-family: var.$font1;
+  font-size: 56px;
+  line-height: 64px;
+  color: #ffffff;
+  @include mix.tablet {
+    font-size: 80px;
+    line-height: 92px;
+  }
+  @include mix.desktop {
+    font-size: 100px;
+    line-height: 115px;
+  }
+}
+.dest-description {
+  font-family: var.$font3;
+  font-size: 15px;
+  line-height: 25px;
+  color: #d0d6f9;
+  @include mix.tablet {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  @include mix.desktop {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+.dest-dist {
+  font-family: var.$font2;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  color: #d0d6f9;
+}
+.dest-dist-num {
+  font-family: var.$font1;
+  font-size: 28px;
+  line-height: 32px;
+  color: #ffffff;
+}
+.dest-time {
+  font-family: var.$font2;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  color: #d0d6f9;
+}
+.dest-time-num {
+  font-family: var.$font1;
+  font-size: 28px;
+  line-height: 32px;
+  color: #ffffff;
 }

@@ -28,13 +28,8 @@
   }
   .nav-link {
     display: flex;
-    a {
-      text-decoration: none;
-      color: #ffffff;
-    }
-    a:active {
-      color: blueviolet;
-    }
+    text-decoration: none;
+    color: #ffffff;
   }
   p {
     font-weight: 700;
