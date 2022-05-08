@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Spare Tourism - Crew</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="main.css" />
@@ -15,8 +15,9 @@
       href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="assets/shared/logo.svg" />
   </head>
-  <body class="home-body">
+  <body class="crew-body">
     <!--Navbar-->
     <div class="nav-line"></div>
     <div class="nav">
@@ -45,8 +46,96 @@
       </div>
     </div>
     <!--Body-->
-    <div class="destination-content"></div>
-
-    <script src="app.js" async defer></script>
+    <div class="crew-content">
+      <div class="crew-sub">
+        <h1 class="crew-sub-num">02</h1>
+        <h1 class="crew-sub-txt">MEET YOUR CREW</h1>
+      </div>
+      <div class="crew-img-container">
+        <img
+          class="crew-img crew-douglas-img"
+          src="assets/crew/image-douglas-hurley.png"
+          alt=""
+        />
+        <img
+          class="crew-img crew-mark-img crew-inactive"
+          src="assets/crew/image-mark-shuttleworth.png"
+          alt=""
+        />
+        <img
+          class="crew-img crew-victor-img crew-inactive"
+          src="assets/crew/image-victor-glover.png"
+          alt=""
+        />
+        <img
+          class="crew-img crew-anousheh-img crew-inactive"
+          src="assets/crew/image-Anousheh-Ansari.png"
+          alt=""
+        />
+      </div>
+      <ul class="crew-button-container">
+        <li>
+          <button
+            class="crew-btn-1 crew-btn-active"
+            onclick="ChangeCrew('crew-douglas')"
+          ></button>
+        </li>
+        <li>
+          <button class="crew-btn-2" onclick="ChangeCrew('crew-mark')"></button>
+        </li>
+        <li>
+          <button
+            class="crew-btn-3"
+            onclick="ChangeCrew('crew-victor')"
+          ></button>
+        </li>
+        <li>
+          <button
+            class="crew-btn-4"
+            onclick="ChangeCrew('crew-anousheh')"
+          ></button>
+        </li>
+      </ul>
+      <div class="crew-member crew-douglas">
+        <h2 class="crew-position">COMMANDER</h2>
+        <h1 class="crew-name">DOUGLAS HURLEY</h1>
+        <p class="crew-paragraph">
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
+        </p>
+      </div>
+      <div class="crew-member crew-mark crew-inactive">
+        <h2 class="crew-position">MISSION SPECIALIST</h2>
+        <h1 class="crew-name">MARK SHUTTLEWORTH</h1>
+        <p class="crew-paragraph">
+          Mark Richard Shuttleworth is the founder and CEO of Canonical, the
+          company behind the Linux-based Ubuntu operating system. Shuttleworth
+          became the first South African to travel to space as a space tourist.
+        </p>
+      </div>
+      <div class="crew-member crew-victor crew-inactive">
+        <h2 class="crew-position">PILOT</h2>
+        <h1 class="crew-name">VICTOR GLOVER</h1>
+        <p class="crew-paragraph">
+          Pilot on the first operational flight of the SpaceX Crew Dragon to the
+          International Space Station. Glover is a commander in the U.S. Navy
+          where he pilots an F/A-18.He was a crew member of Expedition 64, and
+          served as a station systems flight engineer.
+        </p>
+      </div>
+      <div class="crew-member crew-anousheh crew-inactive">
+        <h2 class="crew-position">FLIGHT ENGINEER</h2>
+        <h1 class="crew-name">ANOUSHEH ANSARI</h1>
+        <p class="crew-paragraph">
+          Anousheh Ansari is an Iranian American engineer and co-founder of
+          Prodea Systems. Ansari was the fourth self-funded space tourist, the
+          first self-funded woman to fly to the ISS, and the first Iranian in
+          space.
+        </p>
+      </div>
+    </div>
+    <script src="/javascript/navbar.js" async defer></script>
+    <script src="/javascript/crew.js" async defer></script>
   </body>
 </html>

@@ -129,10 +129,17 @@ table {
   border-spacing: 0;
 }
 
+button {
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  outline: none;
+}
+
 /*fonts*/
 /*colors*/
 /*Screen size media queries*/
-/* HOME */
+/* HOME PAGE*/
 .home-subtitle {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
@@ -211,7 +218,7 @@ table {
   }
 }
 
-/* DESTINATION */
+/* DESTINATION PAGE*/
 .dest-sub {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
@@ -319,6 +326,91 @@ table {
   font-size: 28px;
   line-height: 32px;
   color: #ffffff;
+}
+
+/* CREW PAGE*/
+.crew-sub {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+}
+@media screen and (min-width: 600px) {
+  .crew-sub {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-sub {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
+}
+.crew-sub .crew-sub-num {
+  font-weight: 700;
+  opacity: 0.25;
+}
+.crew-position {
+  font-family: "Bellefair", serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+@media screen and (min-width: 600px) {
+  .crew-position {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-position {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+
+.crew-name {
+  font-family: "Bellefair", serif;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+@media screen and (min-width: 600px) {
+  .crew-name {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-name {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
+
+.crew-paragraph {
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #d0d6f9;
+}
+@media screen and (min-width: 600px) {
+  .crew-paragraph {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-paragraph {
+    font-size: 18px;
+    line-height: 32px;
+  }
 }
 
 .nav-menu .nav-burger {
@@ -465,13 +557,13 @@ table {
 }
 
 .home-body {
-  background: url("/assets/home/background-home-mobile.jpg") no-repeat center center fixed;
+  background: url("assets/home/background-home-mobile.jpg") no-repeat center center fixed;
   background-size: cover;
   text-align: center;
 }
 @media screen and (min-width: 600px) {
   .home-body {
-    background: url("/assets/home/background-home-tablet.jpg") no-repeat center center fixed;
+    background: url("assets/home/background-home-tablet.jpg") no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -480,7 +572,7 @@ table {
 }
 @media screen and (min-width: 1200px) {
   .home-body {
-    background: url("/assets/home/background-home-desktop.jpg") no-repeat center center fixed;
+    background: url("assets/home/background-home-desktop.jpg") no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -562,13 +654,13 @@ table {
 }
 
 .destination-body {
-  background: url("/assets/destination/background-destination-mobile.jpg") no-repeat center center fixed;
+  background: url("assets/destination/background-destination-mobile.jpg") no-repeat center center fixed;
   background-size: cover;
   text-align: center;
 }
 @media screen and (min-width: 600px) {
   .destination-body {
-    background: url("/assets/destination/background-destination-tablet.jpg") no-repeat center center fixed;
+    background: url("assets/destination/background-destination-tablet.jpg") no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -577,7 +669,7 @@ table {
 }
 @media screen and (min-width: 1200px) {
   .destination-body {
-    background: url("/assets/destination/background-destination-desktop.jpg") no-repeat center center fixed;
+    background: url("assets/destination/background-destination-desktop.jpg") no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -608,9 +700,7 @@ table {
   margin: 0 auto;
   display: flex;
   width: 221px;
-}
-.dest-content .dest-sub .dest-sub-num {
-  margin-right: 18px;
+  justify-content: space-between;
 }
 @media screen and (min-width: 600px) {
   .dest-content .dest-sub {
@@ -839,6 +929,213 @@ table {
 @media screen and (min-width: 1200px) {
   .dest-content .dest-time-num {
     margin-left: 0px;
+  }
+}
+
+.crew-body {
+  text-align: center;
+  background-color: #0b0d17;
+}
+@media screen and (min-width: 1200px) {
+  .crew-body {
+    overflow: hidden;
+  }
+}
+
+.crew-body::before {
+  content: "";
+  z-index: -1;
+  background: url("assets/crew/background-crew-mobile.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.25;
+}
+@media screen and (min-width: 600px) {
+  .crew-body::before {
+    background: url("assets/crew/background-crew-tablet.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-body::before {
+    background: url("assets/crew/background-crew-desktop.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .crew-content {
+    display: grid;
+    grid-template-rows: 24px 242px 50px auto;
+    margin: 40px 39px 0 39px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-content {
+    grid-template-columns: calc(50vw - 165px) calc(50vw - 165px);
+    grid-template-rows: 34px 425px 229px;
+    margin: 76px auto 0 auto;
+    padding: 0 165px 0 165px;
+    max-width: 1800px;
+    text-align: start;
+  }
+}
+
+.crew-sub {
+  display: flex;
+  width: 166px;
+  justify-content: space-between;
+  margin: 8px auto;
+}
+@media screen and (min-width: 600px) {
+  .crew-sub {
+    grid-row-start: 1;
+    margin: 0;
+    width: 204px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-sub {
+    width: 286px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+}
+
+.crew-img-container {
+  margin: 32px auto;
+  height: 223px;
+  width: 327px;
+  border-bottom: #383b4b solid 1px;
+}
+.crew-img-container .crew-img {
+  height: 222px;
+}
+@media screen and (min-width: 600px) {
+  .crew-img-container {
+    grid-row-start: 4;
+    margin: 0;
+    border-bottom: none;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 55vh;
+  }
+  .crew-img-container .crew-img {
+    height: 55vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-img-container {
+    width: calc(50vw - 165px);
+    right: 130px;
+    bottom: 0px;
+    height: 75vh;
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .crew-img-container .crew-img {
+    height: 75vh;
+  }
+}
+
+.crew-button-container {
+  margin: 32px auto;
+  display: flex;
+  justify-content: space-between;
+  height: 10px;
+  width: 88px;
+}
+@media screen and (min-width: 600px) {
+  .crew-button-container {
+    grid-row-start: 3;
+    margin: 40px auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-button-container {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    margin: 120px 0 0 0;
+    width: 120px;
+    height: 15px;
+  }
+}
+.crew-button-container li button {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  opacity: 0.17;
+}
+@media screen and (min-width: 1200px) {
+  .crew-button-container li button {
+    height: 15px;
+    width: 15px;
+  }
+}
+.crew-button-container li .crew-btn-active {
+  opacity: 1;
+}
+
+.crew-position {
+  margin-top: 32px;
+}
+@media screen and (min-width: 600px) {
+  .crew-position {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-position {
+    margin-top: 154px;
+  }
+}
+
+.crew-name {
+  margin-top: 8px;
+}
+@media screen and (min-width: 600px) {
+  .crew-name {
+    margin: 8px 0 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-name {
+    margin-top: 15px;
+  }
+}
+
+.crew-paragraph {
+  margin: 16px auto;
+  height: 100px;
+  width: 327px;
+}
+@media screen and (min-width: 600px) {
+  .crew-paragraph {
+    width: 60vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-paragraph {
+    margin: 27px 0 0 0;
+    width: 450px;
+    text-align: start;
+  }
+}
+
+.crew-inactive {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .crew-member {
+    grid-column-start: 1;
+    grid-row-start: 2;
   }
 }
 /*# sourceMappingURL=main.css.map */

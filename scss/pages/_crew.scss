@@ -1,0 +1,182 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins" as mix;
+
+.crew-body {
+  text-align: center;
+  background-color: var.$darkblue;
+  @include mix.desktop {
+    overflow: hidden;
+  }
+}
+.crew-body::before {
+  content: "";
+  z-index: -1;
+  background: url("assets/crew/background-crew-mobile.jpg") no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.25;
+  @include mix.tablet {
+    background: url("assets/crew/background-crew-tablet.jpg") no-repeat center
+      center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  @include mix.desktop {
+    background: url("assets/crew/background-crew-desktop.jpg") no-repeat center
+      center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+.crew-content {
+  @include mix.tablet {
+    display: grid;
+    grid-template-rows: 24px 242px 50px auto;
+    margin: 40px 39px 0 39px;
+  }
+  @include mix.desktop {
+    grid-template-columns: calc(50vw - 165px) calc(50vw - 165px);
+    grid-template-rows: 34px 425px 229px;
+    margin: 76px auto 0 auto;
+    padding: 0 165px 0 165px;
+    max-width: 1800px;
+    text-align: start;
+  }
+}
+.crew-sub {
+  display: flex;
+  width: 166px;
+  justify-content: space-between;
+  margin: 8px auto;
+  @include mix.tablet {
+    grid-row-start: 1;
+    margin: 0;
+    width: 204px;
+  }
+  @include mix.desktop {
+    width: 286px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+}
+.crew-img-container {
+  margin: 32px auto;
+  height: 223px;
+  width: 327px;
+  border-bottom: #383b4b solid 1px;
+  .crew-img {
+    height: 222px;
+  }
+  @include mix.tablet {
+    grid-row-start: 4;
+    margin: 0;
+    border-bottom: none;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 55vh;
+
+    .crew-img {
+      height: 55vh;
+    }
+  }
+  @include mix.desktop {
+    width: calc(50vw - 165px);
+    right: 130px;
+    bottom: 0px;
+    height: 75vh;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    .crew-img {
+      height: 75vh;
+    }
+  }
+}
+.crew-button-container {
+  margin: 32px auto;
+  display: flex;
+  justify-content: space-between;
+  height: 10px;
+  width: 88px;
+  @include mix.tablet {
+    grid-row-start: 3;
+    margin: 40px auto;
+  }
+  @include mix.desktop {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    margin: 120px 0 0 0;
+    width: 120px;
+    height: 15px;
+  }
+  li {
+    button {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background: #ffffff;
+      opacity: 0.17;
+      @include mix.desktop {
+        height: 15px;
+        width: 15px;
+      }
+    }
+    .crew-btn-active {
+      opacity: 1;
+    }
+  }
+}
+.crew-position {
+  margin-top: 32px;
+  @include mix.tablet {
+    margin-top: 60px;
+  }
+  @include mix.desktop {
+    margin-top: 154px;
+  }
+}
+.crew-name {
+  margin-top: 8px;
+  @include mix.tablet {
+    margin: 8px 0 16px;
+  }
+  @include mix.desktop {
+    margin-top: 15px;
+  }
+}
+.crew-paragraph {
+  margin: 16px auto;
+  height: 100px;
+  width: 327px;
+  @include mix.tablet {
+    width: 60vw;
+  }
+  @include mix.desktop {
+    margin: 27px 0 0 0;
+    width: 450px;
+    text-align: start;
+  }
+}
+
+.crew-inactive {
+  display: none;
+}
+.crew-member {
+  @include mix.desktop {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+}

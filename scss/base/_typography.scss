@@ -1,7 +1,7 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins" as mix;
 
-/* HOME */
+/* HOME PAGE*/
 .home-subtitle {
   font-family: var.$font2;
   font-size: 16px;
@@ -63,7 +63,7 @@
   }
 }
 
-/* DESTINATION */
+/* DESTINATION PAGE*/
 
 .dest-sub {
   font-family: var.$font2;
@@ -151,4 +151,76 @@
   font-size: 28px;
   line-height: 32px;
   color: #ffffff;
+}
+
+/* CREW PAGE*/
+
+.crew-content {
+}
+.crew-sub {
+  font-family: var.$font2;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+  @include mix.tablet {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+  @include mix.desktop {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
+  .crew-sub-num {
+    font-weight: 700;
+    opacity: 0.25;
+  }
+  .crew-sub-txt {
+  }
+}
+.crew-position {
+  font-family: var.$font1;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.5;
+  @include mix.tablet {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  @include mix.desktop {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+.crew-name {
+  font-family: var.$font1;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  @include mix.tablet {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  @include mix.desktop {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
+.crew-paragraph {
+  font-family: var.$font3;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #d0d6f9;
+  @include mix.tablet {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  @include mix.desktop {
+    font-size: 18px;
+    line-height: 32px;
+  }
 }

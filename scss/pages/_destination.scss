@@ -2,7 +2,7 @@
 @use "../utils/mixins" as mix;
 
 .destination-body {
-  background: url("/assets/destination/background-destination-mobile.jpg")
+  background: url("assets/destination/background-destination-mobile.jpg")
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10,7 +10,7 @@
   background-size: cover;
   text-align: center;
   @include mix.tablet {
-    background: url("/assets/destination/background-destination-tablet.jpg")
+    background: url("assets/destination/background-destination-tablet.jpg")
       no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
@@ -18,7 +18,7 @@
     -o-background-size: cover;
   }
   @include mix.desktop {
-    background: url("/assets/destination/background-destination-desktop.jpg")
+    background: url("assets/destination/background-destination-desktop.jpg")
       no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
@@ -47,8 +47,8 @@
     margin: 0 auto;
     display: flex;
     width: 221px;
+    justify-content: space-between;
     .dest-sub-num {
-      margin-right: 18px;
     }
     @include mix.tablet {
       margin: 40px 0 0 0;
