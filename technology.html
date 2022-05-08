@@ -16,11 +16,11 @@
       rel="stylesheet"
     />
   </head>
-  <body class="home-body">
+  <body class="tech-body">
     <!--Navbar-->
     <div class="nav-line"></div>
     <div class="nav">
-      <img class="nav-logo" src="assets/shared/logo.svg" alt="" />
+      <a class="nav-logo" href="index.html"><img src="assets/shared/logo.svg" alt=""/></a>
       <div class="nav-menu">
         <ul class="nav-links">
           <li>
@@ -45,8 +45,67 @@
       </div>
     </div>
     <!--Body-->
-    <div class="destination-content"></div>
+    <div class="tech-content">
+      <div class="tech-sub">
+        <h1 class="tech-sub-num">03</h1>
+        <h1 class="tech-sub-txt">SPACE LAUNCH 101</h1>
+      </div>
 
-    <script src="app.js" async defer></script>
+
+      <img
+      class="tech-img tech-vehicle-img"
+      src="assets/technology/image-launch-vehicle-landscape.jpg"
+      alt=""
+      />
+
+
+      <img
+      class="tech-img tech-port-img tech-inactive"
+      src="assets/technology/image-spaceport-landscape.jpg"
+      alt=""
+      />
+
+
+      <img
+      class="tech-img tech-capsule-img tech-inactive"
+      src="assets/technology/image-space-capsule-landscape.jpg"
+      alt=""
+      />
+      
+     
+      <ul class="tech-btn-container">
+        <li><button onclick="ChangeTech('tech-vehicle')" class="tech-btn-1 tech-btn-active">1</button></li>
+        <li><button onclick="ChangeTech('tech-port')" class="tech-btn-2">2</button></li>
+        <li><button onclick="ChangeTech('tech-capsule')" class="tech-btn-3">3</button></li>
+      </ul>
+      <div class="tech tech-vehicle">
+        <h2 class="tech-sub-2">THE TERMINOLOGY...</h2>
+        <h1 class="tech-name">LAUNCH VEHICLE</h1>
+        <p class="tech-paragraph">
+          A launch vehicle or carrier rocket is a rocket-propelled vehicle used to
+          carry a payload from Earth's surface to space, usually to Earth orbit or
+          beyond. Our WEB-X carrier rocket is the most powerful in operation.
+          Standing 150 metres tall, it's quite an awe-inspiring sight on the
+          launch pad!
+        </p>
+        </div>
+      <div class="tech tech-port tech-inactive">
+        <h2 class="tech-sub-2">THE TERMINOLOGY...</h2>
+        <h1 class="tech-name">SPACEPORT</h1>
+        <p class="tech-paragraph">
+          A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.
+        </p>
+        </div>
+      <div class="tech tech-capsule tech-inactive">
+        <h2 class="tech-sub-2">THE TERMINOLOGY...</h2>
+        <h1 class="tech-name">SPACE CAPSULE</h1>
+        <p class="tech-paragraph">
+          A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.
+        </p>
+        </div>
+
+    <script src="/javascript/navbar.js" async defer></script>
+    <script src="/javascript/tech.js" async defer></script>
+
   </body>
 </html>

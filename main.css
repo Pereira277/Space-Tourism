@@ -413,6 +413,86 @@ button {
   }
 }
 
+/* Technology page */
+.tech-sub {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+}
+@media screen and (min-width: 600px) {
+  .tech-sub {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-sub {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
+}
+.tech-sub .tech-sub-num {
+  font-weight: 700;
+  opacity: 0.25;
+}
+
+.tech-sub-2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  color: #d0d6f9;
+}
+@media screen and (min-width: 600px) {
+  .tech-sub-2 {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+}
+
+.tech-name {
+  font-family: "Bellefair", serif;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+@media screen and (min-width: 600px) {
+  .tech-name {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-name {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
+
+.tech-paragraph {
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: #d0d6f9;
+}
+@media screen and (min-width: 600px) {
+  .tech-paragraph {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-paragraph {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
 .nav-menu .nav-burger {
   position: absolute;
   top: 30px;
@@ -491,6 +571,10 @@ button {
   width: 40px;
   margin: 20px 0 0 20px;
 }
+.nav .nav-logo img {
+  height: 40px;
+  width: 40px;
+}
 .nav .nav-menu {
   grid-column-start: 3;
 }
@@ -508,6 +592,10 @@ button {
     height: 48px;
     width: 48px;
     margin: 24px 0 0 39px;
+  }
+  .nav .nav-logo img {
+    height: 48px;
+    width: 48px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1137,5 +1225,212 @@ button {
     grid-column-start: 1;
     grid-row-start: 2;
   }
+}
+
+.tech-body {
+  text-align: center;
+  background-color: #0b0d17;
+}
+@media screen and (min-width: 1200px) {
+  .tech-body {
+    overflow: hidden;
+  }
+}
+
+.tech-body::before {
+  content: "";
+  z-index: -1;
+  background: url("/assets/technology/background-technology-mobile.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.25;
+}
+@media screen and (min-width: 600px) {
+  .tech-body::before {
+    background: url("assets/technology/background-technology-tablet.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-body::before {
+    background: url("/assets/technology/background-technology-desktop.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tech-content {
+    display: grid;
+    grid-template-columns: 80px 47vw 35vw;
+    grid-template-rows: 60px 58vh;
+    margin: 76px 0 100px 165px;
+  }
+}
+
+.tech-sub {
+  margin: 0 auto;
+  width: 176px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 600px) {
+  .tech-sub {
+    margin: 40px 0 0 38.5px;
+    width: 217px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-sub {
+    width: 305px;
+    margin: 0 0 24px 0;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+}
+
+.tech-img {
+  width: 100vw;
+  margin-top: 32px;
+  /*APAGAR*/
+}
+@media screen and (min-width: 600px) {
+  .tech-img {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-img {
+    height: 58vh;
+    width: auto;
+    margin: 0 0 0 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-img {
+    grid-column-start: 3;
+    grid-row: 2/span 2;
+  }
+}
+@media screen and (min-width: 2250px) {
+  .tech-img {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.tech-btn-container {
+  margin: 34px auto 0 auto;
+  display: flex;
+  width: 152px;
+  justify-content: space-between;
+}
+@media screen and (min-width: 600px) {
+  .tech-btn-container {
+    margin: 56px auto 0 auto;
+    width: 210px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-btn-container {
+    width: 80px;
+    height: 304px;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+}
+.tech-btn-container li {
+  height: 80px;
+}
+.tech-btn-container li button {
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  color: white;
+  border: rgba(255, 255, 255, 0.25) solid 1px;
+  border-radius: 50%;
+}
+@media screen and (min-width: 600px) {
+  .tech-btn-container li button {
+    height: 60px;
+    width: 60px;
+    font-family: "Bellefair", serif;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-btn-container li button {
+    height: 80px;
+    width: 80px;
+  }
+}
+.tech-btn-container li .tech-btn-active {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (min-width: 1200px) {
+  .tech {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    text-align: start;
+    margin: auto 80px;
+  }
+}
+
+.tech-sub-2 {
+  margin-top: 26px;
+}
+@media screen and (min-width: 600px) {
+  .tech-sub-2 {
+    margin-top: 44px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-sub-2 {
+    margin-top: 0;
+  }
+}
+
+.tech-name {
+  margin-top: 9px;
+}
+@media screen and (min-width: 600px) {
+  .tech-name {
+    margin-top: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-name {
+    margin-top: 11px;
+  }
+}
+
+.tech-paragraph {
+  margin: 16px 5vw 50px 5vw;
+}
+@media screen and (min-width: 600px) {
+  .tech-paragraph {
+    width: 458px;
+    margin: 16px auto 50px auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tech-paragraph {
+    margin: 17px 0 0 0;
+  }
+}
+
+.tech-inactive {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

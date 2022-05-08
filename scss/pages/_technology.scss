@@ -1,0 +1,176 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins" as mix;
+
+.tech-body {
+  text-align: center;
+  background-color: var.$darkblue;
+  @include mix.desktop {
+    overflow: hidden;
+  }
+}
+.tech-body::before {
+  content: "";
+  z-index: -1;
+  background: url("/assets/technology/background-technology-mobile.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.25;
+  @include mix.tablet {
+    background: url("assets/technology/background-technology-tablet.jpg")
+      no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  @include mix.desktop {
+    background: url("/assets/technology/background-technology-desktop.jpg")
+      no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+.tech-content {
+  @include mix.desktop {
+    display: grid;
+    grid-template-columns: 80px 47vw 35vw;
+    grid-template-rows: 60px 58vh;
+    margin: 76px 0 100px 165px;
+  }
+}
+.tech-sub {
+  margin: 0 auto;
+  width: 176px;
+  display: flex;
+  justify-content: space-between;
+  @include mix.tablet {
+    margin: 40px 0 0 38.5px;
+    width: 217px;
+  }
+  @include mix.desktop {
+    width: 305px;
+    margin: 0 0 24px 0;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+}
+
+.tech-img {
+  width: 100vw;
+  margin-top: 32px;
+  @include mix.tablet {
+    margin-top: 60px;
+  }
+  /*APAGAR*/
+  @include mix.desktop {
+    height: 58vh;
+    width: auto;
+    margin: 0 0 0 0;
+  }
+  @include mix.desktop {
+    grid-column-start: 3;
+    grid-row: 2 / span 2;
+  }
+  @media screen and (min-width: 2250px) {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.tech-btn-container {
+  margin: 34px auto 0 auto;
+  display: flex;
+  width: 152px;
+  justify-content: space-between;
+  @include mix.tablet {
+    margin: 56px auto 0 auto;
+    width: 210px;
+  }
+  @include mix.desktop {
+    width: 80px;
+    height: 304px;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  li {
+    height: 80px;
+    button {
+      height: 40px;
+      width: 40px;
+      background-color: transparent;
+      color: white;
+      border: rgba(255, 255, 255, 0.25) solid 1px;
+      border-radius: 50%;
+      @include mix.tablet {
+        height: 60px;
+        width: 60px;
+        font-family: var.$font1;
+        font-size: 32px;
+        line-height: 37px;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+      @include mix.desktop {
+        height: 80px;
+        width: 80px;
+      }
+    }
+    .tech-btn-active {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+.tech {
+  @include mix.desktop {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    text-align: start;
+    margin: auto 80px;
+  }
+}
+.tech-sub-2 {
+  margin-top: 26px;
+  @include mix.tablet {
+    margin-top: 44px;
+  }
+  @include mix.desktop {
+    margin-top: 0;
+  }
+}
+.tech-name {
+  margin-top: 9px;
+  @include mix.tablet {
+    margin-top: 16px;
+  }
+  @include mix.desktop {
+    margin-top: 11px;
+  }
+}
+.tech-paragraph {
+  margin: 16px 5vw 50px 5vw;
+  @include mix.tablet {
+    width: 458px;
+    margin: 16px auto 50px auto;
+  }
+  @include mix.desktop {
+    margin: 17px 0 0 0;
+  }
+}
+.tech-inactive {
+  display: none;
+}

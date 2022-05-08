@@ -224,3 +224,67 @@
     line-height: 32px;
   }
 }
+
+/* Technology page */
+
+.tech-sub {
+  font-family: var.$font2;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+  @include mix.tablet {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+  @include mix.desktop {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
+  .tech-sub-num {
+    font-weight: 700;
+    opacity: 0.25;
+  }
+}
+.tech-sub-2 {
+  font-family: var.$font2;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  color: #d0d6f9;
+  @include mix.tablet {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+}
+.tech-name {
+  font-family: var.$font1;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  @include mix.tablet {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  @include mix.desktop {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
+.tech-paragraph {
+  font-family: var.$font3;
+  font-size: 15px;
+  line-height: 25px;
+  color: #d0d6f9;
+  @include mix.tablet {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  @include mix.desktop {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
