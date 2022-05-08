@@ -21,7 +21,7 @@ const crewMembersImg = [
 const crewBtn = [crewBtn1, crewBtn2, crewBtn3, crewBtn4];
 
 function ChangeCrew(crew) {
-  for (let i = 0; i < crewMembers.length; i++) {
+  for (let i = 0; i < 3; i++) {
     if (crewMembers[i].classList.contains(crew) == true) {
       console.log(crewMembers[i]);
       crewMembers[i].classList.remove("crew-inactive");

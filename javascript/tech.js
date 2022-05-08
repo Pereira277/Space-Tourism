@@ -35,13 +35,12 @@ if (matchMedia) {
 function WidthChange(mq) {
   if (mq.matches) {
     console.log("WORKING");
-    techVehicleImg.src = "/assets/technology/image-launch-vehicle-portrait.jpg";
-    techPortImg.src = "/assets/technology/image-spaceport-portrait.jpg";
-    techCapsuleImg.src = "/assets/technology/image-space-capsule-portrait.jpg";
+    techVehicleImg.src = "assets/technology/image-launch-vehicle-portrait.jpg";
+    techPortImg.src = "assets/technology/image-spaceport-portrait.jpg";
+    techCapsuleImg.src = "assets/technology/image-space-capsule-portrait.jpg";
   } else {
-    techVehicleImg.src =
-      "/assets/technology/image-launch-vehicle-landscape.jpg";
-    techPortImg.src = "/assets/technology/image-spaceport-landscape.jpg";
-    techCapsuleImg.src = "/assets/technology/image-space-capsule-landscape.jpg";
+    techVehicleImg.src = "assets/technology/image-launch-vehicle-landscape.jpg";
+    techPortImg.src = "assets/technology/image-spaceport-landscape.jpg";
+    techCapsuleImg.src = "assets/technology/image-space-capsule-landscape.jpg";
   }
 }
