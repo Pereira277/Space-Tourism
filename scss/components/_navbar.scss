@@ -27,7 +27,6 @@
   .nav {
     height: 96px;
     grid-template-columns: 87px 1fr 450px;
-
     .nav-logo {
       height: 48px;
       width: 48px;
@@ -59,30 +58,3 @@
 }
 
 /* TYPOGRAPHY */
-.nav {
-  .nav-menu {
-    font-family: var.$font2;
-    font-size: 16px;
-    line-height: 19.2px;
-    letter-spacing: 2.7px;
-    color: #ffffff;
-  }
-  @include mix.tablet {
-    .nav-menu {
-      font-family: var.$font2;
-      font-size: 14px;
-      line-height: 16.8px;
-      letter-spacing: 2.36px;
-      color: #ffffff;
-    }
-  }
-  @include mix.desktop {
-    .nav-menu {
-      font-family: var.$font2;
-      font-size: 16px;
-      line-height: 19.2px;
-      letter-spacing: 2.7px;
-      color: #ffffff;
-    }
-  }
-}

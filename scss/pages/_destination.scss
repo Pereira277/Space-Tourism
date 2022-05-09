@@ -2,28 +2,42 @@
 @use "../utils/mixins" as mix;
 
 .destination-body {
+  text-align: center;
+  background-color: var.$darkblue;
+  @include mix.desktop {
+    overflow: hidden;
+  }
+}
+.destination-body::before {
+  content: "";
+  z-index: -1;
   background: url("assets/destination/background-destination-mobile.jpg")
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  text-align: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.25;
   @include mix.tablet {
     background: url("assets/destination/background-destination-tablet.jpg")
       no-repeat center center fixed;
-    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
   }
   @include mix.desktop {
     background: url("assets/destination/background-destination-desktop.jpg")
       no-repeat center center fixed;
-    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
   }
 }
 
@@ -39,7 +53,7 @@
     display: grid;
     width: 1111px;
     grid-template-columns: 666px 445px;
-    grid-template-rows: 98px 71px 129px 182px 29px 90px;
+    grid-template-rows: 98px 71px 430px;
     text-align: start;
   }
 
@@ -70,7 +84,7 @@
     }
     @include mix.desktop {
       grid-column-start: 1;
-      grid-row: 2 / span 5;
+      grid-row: 2 / span 2;
       width: 445px;
       height: 445px;
       margin: 33px 0 0px 50px;
@@ -133,14 +147,16 @@
       }
     }
   }
+  .dest {
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
   .dest-name {
     margin-top: 20px;
     @include mix.tablet {
       margin-top: 32px;
     }
     @include mix.desktop {
-      grid-column-start: 2;
-      grid-row-start: 3;
       margin: 0 0 14px 0;
     }
   }
@@ -153,8 +169,6 @@
     @include mix.desktop {
       height: 128px;
       width: 444px;
-      grid-column-start: 2;
-      grid-row-start: 4;
       margin: 0 auto 54px 0;
     }
   }
@@ -166,8 +180,6 @@
       margin: 49px 0 28px 0;
     }
     @include mix.desktop {
-      grid-column-start: 2;
-      grid-row-start: 5;
       margin: 0 0 28px 0;
     }
   }
@@ -181,8 +193,6 @@
       grid-template-rows: 1fr 1fr;
     }
     @include mix.desktop {
-      grid-column-start: 2;
-      grid-row-start: 6;
       margin: 0;
     }
   }
@@ -235,4 +245,7 @@
       margin-left: 0px;
     }
   }
+}
+.dest-inactive {
+  display: none;
 }

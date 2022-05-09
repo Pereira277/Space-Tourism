@@ -1,6 +1,35 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins" as mix;
 
+/* NAVBAR */
+.nav {
+  .nav-menu {
+    font-family: var.$font2;
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 2.7px;
+    color: #ffffff;
+  }
+  @include mix.tablet {
+    .nav-menu {
+      font-family: var.$font2;
+      font-size: 14px;
+      line-height: 16.8px;
+      letter-spacing: 2.36px;
+      color: #ffffff;
+    }
+  }
+  @include mix.desktop {
+    .nav-menu {
+      font-family: var.$font2;
+      font-size: 16px;
+      line-height: 19.2px;
+      letter-spacing: 2.7px;
+      color: #ffffff;
+    }
+  }
+}
+
 /* HOME PAGE*/
 .home-subtitle {
   font-family: var.$font2;

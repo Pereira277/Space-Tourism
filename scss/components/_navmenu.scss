@@ -19,7 +19,7 @@
     right: 0;
     top: 0;
     background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(81.5485px);
+    backdrop-filter: blur(40px);
     padding-top: 120px;
     width: 67vw;
     height: 100vh;
@@ -30,10 +30,25 @@
     display: flex;
     text-decoration: none;
     color: #ffffff;
+    margin-left: 12px;
+    @include mix.tablet {
+      margin-left: 0px;
+      line-height: 90px;
+    }
+  }
+  .nav-link:hover {
+    color: rgba(255, 255, 255, 0.5);
+    @include mix.tablet {
+      border-bottom: rgba(255, 255, 255, 0.5) solid 3px;
+      margin-bottom: -3px;
+    }
   }
   p {
     font-weight: 700;
     margin: 0 10px 0 20px;
+    @include mix.tablet {
+      margin: 0 10px 0 0px;
+    }
   }
 }
 @include mix.tablet {
@@ -45,7 +60,8 @@
       position: relative;
       width: 450px;
       height: 96px;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(40px);
     }
     .nav-burger {
       display: none;
@@ -69,6 +85,15 @@
           margin-right: 100px;
         }
       }
+    }
+  }
+  .nav-current {
+    pointer-events: none;
+    border-bottom: white solid 3px;
+
+    @include mix.tablet {
+      border-bottom: white solid 3px;
+      margin-bottom: -3px;
     }
   }
 }
